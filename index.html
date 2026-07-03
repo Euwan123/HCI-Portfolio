@@ -7,13 +7,13 @@
   <title>Euwan Gabriel Abogadie | HCI Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="loader" id="loader" aria-hidden="true">
-    <div class="loader__spinner"></div>
+    <div class="loader__ring"></div>
     <p class="loader__text">Loading Portfolio</p>
   </div>
 
@@ -57,111 +57,169 @@
   <main>
 
     <section class="hero" id="home">
-      <div class="hero__bg"></div>
-      <div class="container hero__content fade-in">
-        <p class="hero__eyebrow">Academic Portfolio</p>
-        <h1 class="hero__title">Euwan Gabriel Abogadie</h1>
-        <p class="hero__subtitle">Bachelor of Science in Computer Science</p>
-        <p class="hero__course">CS152 – Human Computer Interaction</p>
-        <p class="hero__school">Mapúa Malayan Colleges Mindanao</p>
-        <p class="hero__professor">Professor: Cherry B. Lisondra</p>
-        <p class="hero__welcome">
-          Welcome to my academic portfolio. This site showcases the projects, certifications,
-          and achievements I completed during the Human Computer Interaction course. Each section
-          reflects my growth in designing user-centered digital experiences.
-        </p>
-        <a href="#final-project" class="btn btn--primary">View Portfolio</a>
+      <div class="hero__mesh" aria-hidden="true"></div>
+      <div class="container hero__layout fade-in">
+        <div class="hero__main">
+          <p class="hero__eyebrow">CS152 Portfolio</p>
+          <h1 class="hero__title">Euwan Gabriel Abogadie</h1>
+          <ul class="hero__meta">
+            <li>B.S. Computer Science</li>
+            <li>Human Computer Interaction</li>
+            <li>Mapúa Malayan Colleges Mindanao</li>
+            <li>Prof. Cherry B. Lisondra</li>
+          </ul>
+          <p class="hero__welcome">
+            A collection of my HCI coursework — from the SmartNutri capstone prototype to
+            certifications and research documentation completed this term.
+          </p>
+          <div class="hero__actions">
+            <a href="#final-project" class="btn btn--primary">View Project</a>
+            <a href="#certificates" class="btn btn--ghost">Certificates</a>
+          </div>
+        </div>
+        <div class="hero__profile">
+          <div class="hero__photo-frame">
+            <img src="assets/images/Me.jpg" alt="Portrait of Euwan Gabriel Abogadie" class="hero__photo" width="220" height="220" loading="eager">
+          </div>
+          <p class="hero__photo-caption">Euwan Gabriel Abogadie</p>
+        </div>
       </div>
     </section>
 
     <section class="section" id="final-project">
       <div class="container">
         <div class="section__header fade-in">
+          <span class="section__tag">Capstone</span>
           <h2 class="section__title">Final Project</h2>
           <p class="section__description">
-            A capstone HCI project focused on improving usability through research-driven design and iterative prototyping.
+            SmartNutri — a mobile nutrition assistant designed to make healthy eating
+            approachable through scanning, tracking, and AI-guided support.
           </p>
         </div>
 
         <article class="project-card fade-in">
-          <div class="project-card__header">
-            <h3 class="project-card__title">Campus Navigator Mobile Application</h3>
-            <span class="project-card__badge">HCI Final Project</span>
+          <div class="project-card__top">
+            <div>
+              <div class="project-card__header">
+                <h3 class="project-card__title">SmartNutri</h3>
+                <span class="project-card__badge">HCI Final Project</span>
+              </div>
+              <p class="project-card__text">
+                SmartNutri helps users log meals, scan food items, and receive personalized
+                nutrition guidance through an AI assistant. The interface was shaped by
+                usability testing, heuristic evaluation, and iterative prototyping to keep
+                interactions simple for everyday use.
+              </p>
+            </div>
+            <div class="project-card__actions">
+              <a href="#" class="btn btn--primary">Open Prototype</a>
+            </div>
           </div>
 
-          <p class="project-card__text">
-            An interactive mobile prototype designed to help students locate campus facilities,
-            view real-time availability of study spaces, and access wayfinding assistance with
-            minimal cognitive load.
-          </p>
-
-          <div class="project-card__grid">
-            <div class="info-block">
-              <h4 class="info-block__label">Project Objectives</h4>
-              <ul class="info-block__list">
-                <li>Reduce navigation time for new and returning students</li>
-                <li>Apply usability heuristics to improve interface clarity</li>
-                <li>Validate design decisions through user testing sessions</li>
-                <li>Deliver an accessible prototype aligned with WCAG guidelines</li>
+          <div class="bento">
+            <div class="bento__item bento__item--objectives">
+              <h4 class="bento__label">Objectives</h4>
+              <ul class="bento__list">
+                <li>Simplify meal logging with visual food scanning</li>
+                <li>Provide accessible nutrition insights through an AI assistant</li>
+                <li>Apply HCI principles to reduce friction in daily tracking</li>
+                <li>Validate flows through user testing and heuristic review</li>
               </ul>
             </div>
 
-            <div class="info-block">
-              <h4 class="info-block__label">Role in the Project</h4>
-              <p class="info-block__text">
-                Lead UI/UX Designer and Frontend Prototyper — responsible for user research,
-                wireframing, high-fidelity mockups, and usability evaluation.
-              </p>
+            <div class="bento__item bento__item--role">
+              <h4 class="bento__label">My Role</h4>
+              <p>Lead designer and developer — handled user research, wireframes, UI design, prototyping, and documentation including the IMRAD manuscript.</p>
             </div>
 
-            <div class="info-block">
-              <h4 class="info-block__label">Technologies Used</h4>
+            <div class="bento__item bento__item--tech">
+              <h4 class="bento__label">Technologies</h4>
               <div class="tag-list">
                 <span class="tag">Figma</span>
                 <span class="tag">HTML5</span>
                 <span class="tag">CSS3</span>
                 <span class="tag">JavaScript</span>
-                <span class="tag">Miro</span>
+                <span class="tag">AI Integration</span>
               </div>
-            </div>
-
-            <div class="info-block">
-              <h4 class="info-block__label">Prototype Link</h4>
-              <a href="#" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">Open Prototype</a>
             </div>
           </div>
 
-          <h4 class="screenshots__heading">Final Screenshots</h4>
-          <div class="screenshots">
-            <figure class="screenshot-card fade-in">
-              <button class="screenshot-card__trigger" data-modal="assets/screenshots/screenshot-1.svg" data-caption="Home Screen — Main dashboard with quick-access campus services">
-                <img src="assets/screenshots/screenshot-1.svg" alt="Screenshot placeholder: Home Screen" class="screenshot-card__image" loading="lazy">
-              </button>
-              <figcaption class="screenshot-card__caption">
-                <strong>Home Screen</strong>
-                <span>Main dashboard with quick-access campus services and announcements.</span>
-              </figcaption>
-            </figure>
+          <div class="screenshots-block">
+            <div class="screenshots-block__head">
+              <h4 class="screenshots-block__title">App Screens</h4>
+              <p class="screenshots-block__hint">Tap any screen to enlarge</p>
+            </div>
+            <div class="screenshots">
+              <figure class="screenshot-card fade-in">
+                <button class="screenshot-card__trigger" data-modal="assets/images/Login.jpg" data-caption="Login — Secure entry point with a clean, welcoming layout">
+                  <img src="assets/images/Login.jpg" alt="SmartNutri login screen" class="screenshot-card__image" loading="lazy">
+                </button>
+                <figcaption class="screenshot-card__caption">
+                  <strong>Login</strong>
+                  <span>Simple sign-in flow designed for quick, low-friction access.</span>
+                </figcaption>
+              </figure>
 
-            <figure class="screenshot-card fade-in">
-              <button class="screenshot-card__trigger" data-modal="assets/screenshots/screenshot-2.svg" data-caption="Map View — Interactive campus map with location pins">
-                <img src="assets/screenshots/screenshot-2.svg" alt="Screenshot placeholder: Map View" class="screenshot-card__image" loading="lazy">
-              </button>
-              <figcaption class="screenshot-card__caption">
-                <strong>Map View</strong>
-                <span>Interactive campus map with searchable location pins and directions.</span>
-              </figcaption>
-            </figure>
+              <figure class="screenshot-card fade-in">
+                <button class="screenshot-card__trigger" data-modal="assets/images/Home.jpg" data-caption="Home — Dashboard with daily nutrition overview">
+                  <img src="assets/images/Home.jpg" alt="SmartNutri home screen" class="screenshot-card__image" loading="lazy">
+                </button>
+                <figcaption class="screenshot-card__caption">
+                  <strong>Home</strong>
+                  <span>Daily summary and quick actions at a glance.</span>
+                </figcaption>
+              </figure>
 
-            <figure class="screenshot-card fade-in">
-              <button class="screenshot-card__trigger" data-modal="assets/screenshots/screenshot-3.svg" data-caption="Profile Settings — User preferences and accessibility options">
-                <img src="assets/screenshots/screenshot-3.svg" alt="Screenshot placeholder: Profile Settings" class="screenshot-card__image" loading="lazy">
+              <figure class="screenshot-card fade-in">
+                <button class="screenshot-card__trigger" data-modal="assets/images/Food Scanned.jpg" data-caption="Food Scanned — Meal capture through camera scanning">
+                  <img src="assets/images/Food Scanned.jpg" alt="SmartNutri food scanning screen" class="screenshot-card__image" loading="lazy">
+                </button>
+                <figcaption class="screenshot-card__caption">
+                  <strong>Food Scanned</strong>
+                  <span>Scan-and-log workflow for faster meal tracking.</span>
+                </figcaption>
+              </figure>
+
+              <figure class="screenshot-card fade-in">
+                <button class="screenshot-card__trigger" data-modal="assets/images/AI Assistant.jpg" data-caption="AI Assistant — Personalized nutrition guidance and support">
+                  <img src="assets/images/AI Assistant.jpg" alt="SmartNutri AI assistant screen" class="screenshot-card__image" loading="lazy">
+                </button>
+                <figcaption class="screenshot-card__caption">
+                  <strong>AI Assistant</strong>
+                  <span>Conversational guidance tailored to user goals.</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="docs-block">
+            <div class="docs-block__head">
+              <h4 class="docs-block__title">Project Documentation</h4>
+              <p class="docs-block__hint">Click to view PDF</p>
+            </div>
+            <div class="docs">
+              <button class="doc-card fade-in" data-pdf="assets/files/(PDF) SmartNutri_Manuscript.pdf" data-caption="SmartNutri Manuscript — Full research manuscript">
+                <span class="doc-card__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </span>
+                <span class="doc-card__body">
+                  <strong>SmartNutri Manuscript</strong>
+                  <span>Complete research manuscript documenting the project study.</span>
+                </span>
+                <span class="doc-card__action">View PDF</span>
               </button>
-              <figcaption class="screenshot-card__caption">
-                <strong>Profile Settings</strong>
-                <span>Personalized preferences including font size and contrast adjustments.</span>
-              </figcaption>
-            </figure>
+
+              <button class="doc-card fade-in" data-pdf="assets/files/IMRAD.pdf" data-caption="IMRAD Version — Structured research paper format">
+                <span class="doc-card__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                </span>
+                <span class="doc-card__body">
+                  <strong>IMRAD Version</strong>
+                  <span>Introduction, Methods, Results, and Discussion formatted paper.</span>
+                </span>
+                <span class="doc-card__action">View PDF</span>
+              </button>
+            </div>
           </div>
         </article>
       </div>
@@ -170,65 +228,55 @@
     <section class="section section--alt" id="certificates">
       <div class="container">
         <div class="section__header fade-in">
+          <span class="section__tag">Credentials</span>
           <h2 class="section__title">Certificates</h2>
           <p class="section__description">
-            Professional development and academic recognition earned during the term.
+            Academic participation and online learning completed alongside the HCI course.
           </p>
         </div>
 
         <div class="certificates">
-          <article class="certificate-card fade-in">
-            <button class="certificate-card__trigger" data-modal="assets/certificates/certificate-innovision.svg" data-caption="CCIS InnoVision 2026 Certificate of Participation">
-              <img src="assets/certificates/certificate-innovision.svg" alt="Certificate placeholder: CCIS InnoVision 2026" class="certificate-card__image" loading="lazy">
+          <article class="certificate-card certificate-card--featured fade-in">
+            <button class="certificate-card__trigger" data-modal="assets/certificates/certofparticipation.png" data-caption="CCIS InnoVision 2026 — Certificate of Participation">
+              <img src="assets/certificates/certofparticipation.png" alt="CCIS InnoVision certificate of participation" class="certificate-card__image" loading="lazy">
             </button>
             <div class="certificate-card__body">
-              <h3 class="certificate-card__title">CCIS InnoVision 2026 Certificate of Participation</h3>
+              <span class="certificate-card__org">CCIS InnoVision</span>
+              <h3 class="certificate-card__title">Certificate of Participation</h3>
               <time class="certificate-card__date" datetime="2026-02">February 2026</time>
               <p class="certificate-card__text">
-                Recognized for active participation in the CCIS InnoVision innovation showcase,
-                presenting HCI concepts and design thinking methodologies.
+                Participated in the CCIS InnoVision showcase, presenting SmartNutri and
+                demonstrating how HCI methods shaped the project's design decisions.
               </p>
             </div>
           </article>
 
           <article class="certificate-card fade-in">
-            <button class="certificate-card__trigger" data-modal="assets/certificates/certificate-coursera-1.svg" data-caption="Coursera Certificate — Introduction to User Experience Design">
-              <img src="assets/certificates/certificate-coursera-1.svg" alt="Certificate placeholder: Coursera Certificate 1" class="certificate-card__image" loading="lazy">
+            <button class="certificate-card__trigger" data-modal="assets/certificates/userexp.png" data-caption="Coursera — Introduction to User Experience Design">
+              <img src="assets/certificates/userexp.png" alt="Coursera Introduction to User Experience Design certificate" class="certificate-card__image" loading="lazy">
             </button>
             <div class="certificate-card__body">
+              <span class="certificate-card__org">Coursera</span>
               <h3 class="certificate-card__title">Introduction to User Experience Design</h3>
               <time class="certificate-card__date" datetime="2026-01">January 2026</time>
               <p class="certificate-card__text">
-                Completed a Coursera specialization module covering user research fundamentals,
-                persona development, and iterative design workflows.
+                Covered UX fundamentals including user research, wireframing, and
+                design principles applied throughout the SmartNutri project.
               </p>
             </div>
           </article>
 
           <article class="certificate-card fade-in">
-            <button class="certificate-card__trigger" data-modal="assets/certificates/certificate-coursera-2.svg" data-caption="Coursera Certificate — Human-Centered Design">
-              <img src="assets/certificates/certificate-coursera-2.svg" alt="Certificate placeholder: Coursera Certificate 2" class="certificate-card__image" loading="lazy">
+            <button class="certificate-card__trigger" data-modal="assets/certificates/inputandinteraction.png" data-caption="Coursera — Input and Interaction">
+              <img src="assets/certificates/inputandinteraction.png" alt="Coursera Input and Interaction certificate" class="certificate-card__image" loading="lazy">
             </button>
             <div class="certificate-card__body">
-              <h3 class="certificate-card__title">Human-Centered Design: An Introduction</h3>
+              <span class="certificate-card__org">Coursera</span>
+              <h3 class="certificate-card__title">Input and Interaction</h3>
               <time class="certificate-card__date" datetime="2026-01">January 2026</time>
               <p class="certificate-card__text">
-                Earned through Coursera for demonstrating proficiency in empathy mapping,
-                prototyping techniques, and usability testing frameworks.
-              </p>
-            </div>
-          </article>
-
-          <article class="certificate-card fade-in">
-            <button class="certificate-card__trigger" data-modal="assets/certificates/certificate-other.svg" data-caption="Other Achievement Certificate">
-              <img src="assets/certificates/certificate-other.svg" alt="Certificate placeholder: Other Achievement" class="certificate-card__image" loading="lazy">
-            </button>
-            <div class="certificate-card__body">
-              <h3 class="certificate-card__title">Academic Excellence in HCI Coursework</h3>
-              <time class="certificate-card__date" datetime="2026-03">March 2026</time>
-              <p class="certificate-card__text">
-                Acknowledged for consistent quality in design documentation, peer collaboration,
-                and application of HCI principles across term assignments.
+                Explored interaction design patterns, input methods, and usability
+                considerations that informed SmartNutri's interface flows.
               </p>
             </div>
           </article>
@@ -239,42 +287,63 @@
     <section class="section" id="awards">
       <div class="container">
         <div class="section__header fade-in">
+          <span class="section__tag">Recognition</span>
           <h2 class="section__title">Awards</h2>
           <p class="section__description">
-            Recognition and reflections from academic competitions and milestones.
+            Milestones and personal reflections from this term's work.
           </p>
         </div>
 
-        <div class="award-empty fade-in">
-          <div class="award-empty__icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="8" r="6"></circle>
-              <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
-            </svg>
+        <article class="award-card fade-in">
+          <div class="award-card__visual">
+            <button class="award-card__trigger" data-modal="assets/awards/SmartNutriaward.png" data-caption="SmartNutri — CCIS InnoVision Recognition">
+              <img src="assets/awards/SmartNutriaward.png" alt="SmartNutri award recognition" class="award-card__image" loading="lazy">
+            </button>
           </div>
-          <p class="award-empty__text">No award received during this term.</p>
-          <p class="award-empty__subtext">
-            This section will be updated when recognition is received. The focus this term
-            was on building foundational HCI skills through coursework and project deliverables.
-          </p>
-        </div>
+          <div class="award-card__content">
+            <span class="award-card__badge">CCIS InnoVision 2026</span>
+            <h3 class="award-card__title">SmartNutri Project Recognition</h3>
+            <p class="award-card__desc">
+              Recognized for presenting SmartNutri at the CCIS InnoVision innovation showcase,
+              where the project was evaluated for its user-centered design approach and
+              practical application of HCI concepts.
+            </p>
+            <div class="award-card__reflection">
+              <h4>My Reflection</h4>
+              <p>
+                Seeing SmartNutri recognized at InnoVision was genuinely rewarding — not just
+                because of the award itself, but because it confirmed that the hours spent on
+                user research, testing, and redesigning actually mattered. There were moments
+                during development when I kept second-guessing whether the interface was
+                intuitive enough, especially the food scanning flow. Presenting the project
+                and hearing feedback from faculty and peers reminded me why HCI exists: design
+                is never really finished, it evolves with the people who use it. This experience
+                pushed me to think more critically about accessibility and clarity, and it
+                motivated me to keep building products that feel helpful rather than complicated.
+              </p>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
     <section class="section section--alt" id="about">
       <div class="container">
         <div class="section__header fade-in">
+          <span class="section__tag">Profile</span>
           <h2 class="section__title">About</h2>
-          <p class="section__description">Student profile and academic background.</p>
+          <p class="section__description">A quick look at who I am and what I study.</p>
         </div>
 
         <div class="about fade-in">
-          <div class="about__info">
+          <div class="about__profile">
+            <img src="assets/images/Me.jpg" alt="Euwan Gabriel Abogadie" class="about__avatar" width="120" height="120" loading="lazy">
+            <h3 class="about__name">Euwan Gabriel Abogadie</h3>
+            <p class="about__role">Computer Science Student</p>
+          </div>
+
+          <div class="about__details">
             <dl class="about__list">
-              <div class="about__item">
-                <dt>Name</dt>
-                <dd>Euwan Gabriel Abogadie</dd>
-              </div>
               <div class="about__item">
                 <dt>Program</dt>
                 <dd>Bachelor of Science in Computer Science</dd>
@@ -296,21 +365,19 @@
                 <dd>2025 – 2026</dd>
               </div>
             </dl>
-          </div>
 
-          <div class="about__bio">
-            <h3 class="about__bio-title">Biography</h3>
-            <p>
-              I am a Computer Science student at Mapúa Malayan Colleges Mindanao with a strong
-              interest in software development, UI/UX design, and continuous learning. Through
-              CS152, I have deepened my understanding of how thoughtful interaction design shapes
-              meaningful user experiences.
-            </p>
-            <p>
-              I enjoy translating research insights into practical interfaces that are accessible,
-              intuitive, and visually cohesive. This portfolio documents my academic journey and
-              serves as a foundation for future projects in human-centered technology.
-            </p>
+            <div class="about__bio">
+              <p>
+                I'm a Computer Science student who enjoys building software that people
+                actually want to use. HCI taught me to slow down and ask better questions
+                before writing code — who is this for, and does it make their life easier?
+              </p>
+              <p>
+                I'm especially interested in UI/UX design, frontend development, and
+                continuous learning. SmartNutri is the project I'm most proud of from this
+                term, and this portfolio is where I keep track of how far I've come.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -332,10 +399,10 @@
     </svg>
   </button>
 
-  <div class="modal" id="imageModal" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+  <div class="modal" id="imageModal" role="dialog" aria-modal="true" aria-label="Media preview" hidden>
     <div class="modal__overlay" id="modalOverlay"></div>
-    <div class="modal__content">
-      <button class="modal__close" id="modalClose" aria-label="Close image preview">
+    <div class="modal__content modal__content--image">
+      <button class="modal__close" id="modalClose" aria-label="Close preview">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -343,6 +410,25 @@
       </button>
       <img src="" alt="" class="modal__image" id="modalImage">
       <p class="modal__caption" id="modalCaption"></p>
+    </div>
+  </div>
+
+  <div class="modal" id="pdfModal" role="dialog" aria-modal="true" aria-label="PDF viewer" hidden>
+    <div class="modal__overlay" id="pdfOverlay"></div>
+    <div class="modal__content modal__content--pdf">
+      <div class="modal__toolbar">
+        <p class="modal__title" id="pdfTitle"></p>
+        <div class="modal__toolbar-actions">
+          <a href="#" class="modal__open-link" id="pdfOpenLink" target="_blank" rel="noopener noreferrer">Open in new tab</a>
+          <button class="modal__close modal__close--inline" id="pdfClose" aria-label="Close PDF viewer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <iframe src="" title="PDF document viewer" class="modal__pdf" id="pdfFrame"></iframe>
     </div>
   </div>
 

@@ -14,9 +14,16 @@
   const modalClose = document.getElementById('modalClose');
   const modalImage = document.getElementById('modalImage');
   const modalCaption = document.getElementById('modalCaption');
+  const pdfModal = document.getElementById('pdfModal');
+  const pdfOverlay = document.getElementById('pdfOverlay');
+  const pdfClose = document.getElementById('pdfClose');
+  const pdfFrame = document.getElementById('pdfFrame');
+  const pdfTitle = document.getElementById('pdfTitle');
+  const pdfOpenLink = document.getElementById('pdfOpenLink');
   const navLinks = document.querySelectorAll('.nav__link');
   const fadeElements = document.querySelectorAll('.fade-in');
   const modalTriggers = document.querySelectorAll('[data-modal]');
+  const pdfTriggers = document.querySelectorAll('[data-pdf]');
 
   function initTheme() {
     const saved = localStorage.getItem(THEME_KEY);
@@ -90,7 +97,7 @@
           }
         });
       },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
     );
 
     fadeElements.forEach(function (el) {
@@ -98,21 +105,51 @@
     });
   }
 
-  function openModal(src, caption) {
+  function lockBody() {
+    document.body.classList.add('modal-open');
+  }
+
+  function unlockBody() {
+    document.body.classList.remove('modal-open');
+  }
+
+  function openImageModal(src, caption) {
     modalImage.src = src;
     modalImage.alt = caption;
     modalCaption.textContent = caption;
     imageModal.removeAttribute('hidden');
-    document.body.classList.add('modal-open');
+    lockBody();
     modalClose.focus();
   }
 
-  function closeModal() {
+  function closeImageModal() {
     imageModal.setAttribute('hidden', '');
-    document.body.classList.remove('modal-open');
     modalImage.src = '';
     modalImage.alt = '';
     modalCaption.textContent = '';
+    if (pdfModal.hasAttribute('hidden')) {
+      unlockBody();
+    }
+  }
+
+  function openPdfModal(src, caption) {
+    const encoded = encodeURI(src);
+    pdfFrame.src = encoded;
+    pdfTitle.textContent = caption;
+    pdfOpenLink.href = encoded;
+    pdfModal.removeAttribute('hidden');
+    lockBody();
+    pdfClose.focus();
+  }
+
+  function closePdfModal() {
+    pdfModal.setAttribute('hidden', '');
+    pdfFrame.src = '';
+    pdfTitle.textContent = '';
+    pdfOpenLink.href = '#';
+    if (imageModal.hasAttribute('hidden')) {
+      unlockBody();
+    }
   }
 
   function handleAnchorClick(e) {
@@ -134,7 +171,7 @@
   initTheme();
 
   window.addEventListener('load', function () {
-    setTimeout(hideLoader, 600);
+    setTimeout(hideLoader, 500);
   });
 
   themeToggle.addEventListener('click', toggleTheme);
@@ -156,17 +193,27 @@
     trigger.addEventListener('click', function () {
       const src = this.getAttribute('data-modal');
       const caption = this.getAttribute('data-caption') || '';
-      openModal(src, caption);
+      openImageModal(src, caption);
     });
   });
 
-  modalClose.addEventListener('click', closeModal);
-  modalOverlay.addEventListener('click', closeModal);
+  pdfTriggers.forEach(function (trigger) {
+    trigger.addEventListener('click', function () {
+      const src = this.getAttribute('data-pdf');
+      const caption = this.getAttribute('data-caption') || 'Document';
+      openPdfModal(src, caption);
+    });
+  });
+
+  modalClose.addEventListener('click', closeImageModal);
+  modalOverlay.addEventListener('click', closeImageModal);
+  pdfClose.addEventListener('click', closePdfModal);
+  pdfOverlay.addEventListener('click', closePdfModal);
 
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !imageModal.hasAttribute('hidden')) {
-      closeModal();
-    }
+    if (e.key !== 'Escape') return;
+    if (!imageModal.hasAttribute('hidden')) closeImageModal();
+    if (!pdfModal.hasAttribute('hidden')) closePdfModal();
   });
 
   window.addEventListener('resize', function () {
