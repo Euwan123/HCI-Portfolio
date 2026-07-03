@@ -501,6 +501,10 @@ button {
   color: var(--text-secondary);
   font-size: 0.95rem;
   max-width: 640px;
+  margin-bottom: 1.25rem;
+}
+
+.project-card__repo {
   margin-bottom: 1.75rem;
 }
 
