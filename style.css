@@ -471,15 +471,6 @@ button {
   box-shadow: var(--shadow-md);
 }
 
-.project-card__top {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1.25rem;
-  margin-bottom: 1.75rem;
-}
-
 .project-card__header {
   display: flex;
   flex-wrap: wrap;
@@ -510,6 +501,7 @@ button {
   color: var(--text-secondary);
   font-size: 0.95rem;
   max-width: 640px;
+  margin-bottom: 1.75rem;
 }
 
 .bento {
